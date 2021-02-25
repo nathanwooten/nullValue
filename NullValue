@@ -1,0 +1,13 @@
+<?php
+
+namespace Pf\Type;
+
+class NullValue {
+
+    public function __invoke( Pf\Type\NullValue $nullValue = null ) {
+    
+        return $nullValue;
+    
+    }
+
+}
