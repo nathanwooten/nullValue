@@ -4,8 +4,13 @@ namespace Pf\Type;
 
 class NullValue {
 
-    public function __invoke( Pf\Type\NullValue $nullValue = null ) {
+    public function __invoke( $nullValue = null ) {
     
+        if ( ! is_null( $nullValue ) && ! $nullValue instanceof Pf\Type\NullValue ) {
+
+            throw new Exception( 'Value not null' );
+        }
+
         return $nullValue;
     
     }
